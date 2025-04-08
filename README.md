@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Books - 書籍管理アプリケーション
 
-## Getting Started
+My Booksは個人の書籍コレクションを管理するためのウェブアプリケーションです。Next.js 15とReact 19を使用して実装されており、書籍の検索、登録、統計分析などの機能を備えています。
 
-First, run the development server:
+## 機能
+
+- **マイ書籍**: 登録した書籍のコレクション管理
+- **書籍検索**: タイトル、著者名、ISBNによる書籍検索
+- **書籍登録**: 新しい書籍の詳細情報を登録
+- **読書統計**: 読書習慣や傾向を可視化
+- **設定**: アプリケーション設定のカスタマイズ
+
+## 技術スタック
+
+- **フロントエンド**: React 19, Next.js 15
+- **スタイリング**: TailwindCSS
+- **アイコン**: Lucide React
+- **開発ツール**: Deno, Biome (リンティング/フォーマット)
+
+## 必要条件
+
+- Node.js 20.0以上
+- Deno 1.40以上
+- npm または yarn
+
+## インストールと実行
+
+### 1. リポジトリのクローン
+
+```bash
+git clone https://github.com/your-username/my-books.git
+cd my-books
+```
+
+### 2. 依存関係のインストール
+
+```bash
+npm install
+# または
+yarn install
+```
+
+### 3. アプリケーションの起動
+
+開発サーバー（Turbopack使用）:
 
 ```bash
 npm run dev
-# or
+# または
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+アプリケーションは http://localhost:3000 で実行されます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## コード品質とフォーマット
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+このプロジェクトでは、Denoを使用してBiomeによるリンティングとフォーマットを行います。
 
-## Learn More
+### リンティング
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+# または
+yarn lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### フォーマット
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run format
+# または
+yarn format
+```
 
-## Deploy on Vercel
+## ビルドと本番環境での実行
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ビルド
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+# または
+yarn build
+```
+
+### 本番環境での実行
+
+```bash
+npm run start
+# または
+yarn start
+```
+
+## プロジェクト構造
+
+```
+/app
+  /layout.tsx             # ルートレイアウト
+  /page.tsx               # ホームページ（マイ書籍）
+  /search/page.tsx        # 書籍検索ページ
+  /register/page.tsx      # 書籍登録ページ
+  /stats/page.tsx         # 読書統計ページ
+  /settings/page.tsx      # 設定ページ
+  /components
+    /ui
+      /Header.tsx         # ヘッダーコンポーネント
+      /Sidebar.tsx        # サイドバーコンポーネント
+      /UserMenu.tsx       # ユーザーメニューコンポーネント
+      /MainLayout.tsx     # メインレイアウトコンポーネント
+```
