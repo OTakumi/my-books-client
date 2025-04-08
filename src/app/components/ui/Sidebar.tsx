@@ -13,7 +13,7 @@ export const Sidebar: React.FC = () => {
     { href: '/search', label: '書籍検索', icon: Search, section: 'main' },
     { href: '/register', label: '書籍登録', icon: PlusCircle, section: 'main' },
     { href: '/stats', label: '読書統計', icon: BarChart, section: 'main' },
-    { href: '/settigs', label: '設定', icon: Settings, section: 'footer' },
+    { href: '/settings', label: '設定', icon: Settings, section: 'footer' },
   ];
 
   return (
